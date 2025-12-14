@@ -1,0 +1,142 @@
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML, Body 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Root 앱 컨테이너 설정 */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  /* Primary Colors - Cyan/Blue */
+  --color-primary: #00BCD4;
+  --color-primary-light: #00E5FF;
+  --color-primary-dark: #0097A7;
+
+  /* Secondary Colors - Gold/Yellow */
+  --color-secondary: #FFD700;
+  --color-secondary-light: #FFEB3B;
+  --color-secondary-dark: #FFA000;
+
+  /* Accent Colors */
+  --color-accent-pink: #FF69B4;
+  --color-accent-pink-dark: #FF1493;
+  --color-accent-purple: #9370DB;
+  --color-accent-purple-dark: #BA55D3;
+  --color-accent-orange: #FFA500;
+  --color-accent-mint: #40E0D0;
+
+  /* Background Colors */
+  --color-bg-primary: #FFF9E6;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-gradient: linear-gradient(135deg, #FFF9E6 0%, #FFFFFF 100%);
+
+  /* Text Colors */
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-muted: #666666;
+  --color-text-light: #999999;
+
+  /* Border & Outline */
+  --color-border-light: #E0E0E0;
+  --color-border-medium: #CCCCCC;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Interactive Colors */
+  --color-button-primary: #00BCD4;
+  --color-button-hover: #00E5FF;
+  --color-button-active: #0097A7;
+  --color-link: #00BCD4;
+  --color-link-hover: #FFD700;
+  --color-link-visited: #9370DB;
+
+  /* Overlay & Transparency */
+  --overlay-light: rgba(255, 255, 255, 0.3);
+  --overlay-medium: rgba(255, 255, 255, 0.5);
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+
+  font-family: 'Roboto', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-primary);
+  font-weight: bold;
+}
+
+/* 다크모드 지원 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background - 반전 */
+    --color-bg-primary: #1a1a1a;
+    --color-bg-secondary: #2d2d2d;
+
+    /* Text - 밝게 조정 */
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #E0E0E0;
+    --color-text-muted: #A0A0A0;
+
+    /* Primary - 밝기 증가 */
+    --color-primary: #00E5FF;
+    --color-primary-light: #4DFFFF;
+
+    /* Secondary - 채도 감소 */
+    --color-secondary: #FFE066;
+
+    /* Accent - 대비 강화 */
+    --color-accent-pink: #FF80C4;
+    --color-accent-purple: #B399E6;
+
+    /* Shadow - 어둡게 */
+    --color-shadow: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  :root {
+    --color-primary: #00E5FF;
+    --color-secondary: #FFD700;
+  }
+}
